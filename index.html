@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="fontawesome/css/all.min.css">
+    <title>Ultra Voice</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="tituloPrincipal">Ultra Voice<span class="beta">BETA</span></h1>
+    </header>
+
+    <div class="caixaInteracao">
+        <textarea name="campoInteracaoAPI" id="campoInteracaoAPI" disabled>Clique no microfone abaixo para iniciar o cadastro com comando de voz!</textarea>
+    </div>
+
+    <div class="btnGravar">
+        <button name="botaoGravar" id="botaoGravar" onclick="validacaoComandoDeVoz();"><i id="btnIcone" class="fa-solid fa-microphone-slash" style="color: #FF0000;"></i></button>
+    </div>
+
+    <form action="">
+        <fieldset class="campos">
+            <h2 class="tituloSecundario">Cadastro de Pessoa</h2>
+            <div class="camposConjuntos">
+                <div class="camposContainer">
+                    <label class="camposNome" for="campoTextoNomeCompleto">Nome:</label>
+                    <input class="camposValor" type="text" name="campoTextoNomeCompleto" id="campoTextoNomeCompleto" style="width: calc(100% - 100px);" placeholder="Seu nome completo" required readonly>
+                </div>
+
+                <div class="camposContainer" id="containerData">
+                    <label class="camposNome" for="dia">Data de Nascimento:</label>
+                    <input class="camposValor camposData" type="text" name="campoValorDia" id="campoValorDia" inputmode="numeric" size="1" maxlength="2" placeholder="dd" pattern="\d*" required readonly>
+                    <input class="camposValor camposData" type="text" name="campoValorMes" id="campoValorMes" inputmode="numeric" size="1" maxlength="2" placeholder="mm" pattern="\d*" required readonly>
+                    <input class="camposValor camposData" type="text" name="campoValorAno" id="campoValorAno" inputmode="numeric" size="1" maxlength="4" placeholder="aaaa" pattern="\d*" required readonly>
+                </div>
+
+                <div class="camposContainer">
+                    <label class="camposNome" for="campoTextoProfissao">Profissão:</label>
+                    <input class="camposValor" type="text" name="campoTextoProfissao" id="campoTextoProfissao" style="width: calc(100% - 130px);" placeholder="Sua profissão" readonly>
+                </div>
+
+                <div class="camposContainer">
+                    <label class="camposNome" for="campoEstadoCivil">Estado Civil:</label>
+                    <select class="camposSelect selecionePlaceHolder" name="campoSelectEstadoCivil" id="campoSelectEstadoCivil" onfocus="this.size=this.options.length" onblur="this.size=1; opcaoSelecionada();" required>
+                        <option value="">Selecione</option>
+                        <option value="1">Solteiro(a)</option>
+                        <option value="2">Casado(a)</option>
+                        <option value="3">Divorciado(a)</option>
+                        <option value="4">Viúvo(a)</option>
+                    </select>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+
+    <script src="assets/js/speechSynthesis.js"></script>
+    <script src="assets/js/speechRecognition.js"></script>
+    <script src="assets/js/index.js"></script>
+</body>
+</html>

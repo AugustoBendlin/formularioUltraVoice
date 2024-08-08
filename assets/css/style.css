@@ -1,0 +1,267 @@
+/* Estilo Geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+}
+
+body {
+    background-color: rgb(32, 32, 95);
+}
+
+.tituloPrincipal {
+    color: rgb(240, 255, 255);
+    font-size: 50px;
+    text-align: center;
+}
+
+.tituloSecundario {
+    color: rgb(240, 255, 255);
+    margin-top: 30px;
+    text-align: center;
+}
+
+.beta {
+    font-size: 18px;
+    margin-left: 3px;
+}
+
+/* Cabeçalho */
+header {
+    padding: 28px 4%;
+    background-color: rgb(14, 14, 63);
+}
+
+/* Estilo Fieldset */
+.campos {
+    position: absolute;
+    margin: auto;
+    border: none;
+    align-items: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 20px;
+    width: 800px;
+    height: 400px;
+    box-shadow: 0 0 18px rgb(14, 14, 63);
+}
+
+/* Estilo Formulário */
+.camposConjuntos {
+    position: absolute;
+    width: 700px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.camposContainer {
+    display: flex;
+}
+
+.camposNome {
+    padding: 10px;
+    color: rgb(240, 255, 255);
+    text-align: right;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.camposValor {
+    text-align: left;
+    margin-top: 10px;
+    background-color: rgba(23, 23, 71, 0.55);
+    color: rgb(240, 255, 255);
+    border: 0;
+    outline: 0;
+    padding: 8px 8px;
+    border-radius: 15px;
+    font-size: 18px;
+}
+
+.camposValor::placeholder {
+    color: rgba(240, 255, 255, 0.247);
+}
+
+.camposData {
+    text-align: center;
+    margin-right: 5px;
+    width: none;
+}
+
+.camposSelect {
+    text-align: left;
+    margin-top: 10px;
+    color: rgb(240, 255, 255);
+    border: 0;
+    outline: 0;
+    border-radius: 15px;
+    font-size: 18px;
+    position: absolute;
+    padding: 12px 12px;
+    left: 128px;
+    width: 220px;
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url('data:image/svg+xml;utf8, <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="%23f0ffff" d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg>');
+    cursor: pointer;
+    border: none;
+    background-repeat: no-repeat;
+    background-position-x: 90%;
+    background-position-y: 50%;
+    background-color: rgba(23, 23, 71, 0.55);
+    margin-right: 2rem;
+    padding-right: 2rem;
+}
+
+.camposSelect:focus {
+    background: none;
+    background-color: rgba(23, 23, 71, 0.95);
+    color: rgb(240, 255, 255);
+}
+
+.emFoco {
+    box-shadow: 0 0 10px rgb(240, 255, 255);
+}
+
+.campoConfirmado {
+    background: url('data:image/svg+xml;utf8, <svg width="15" height="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="%2332cd32" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>');
+    background-repeat: no-repeat;
+    background-position-x: 99%;
+    background-position-y: 50%;
+    background-color: rgba(23, 23, 71, 0.55);
+}
+
+.dataValida {
+    background: url('data:image/svg+xml;utf8, <svg width="15" height="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="%2332cd32" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>');
+    background-repeat: no-repeat;
+    background-position-x: 65%;
+    background-position-y: 62%;
+}
+
+.selecionePlaceHolder {
+    color: rgba(240, 255, 255, 0.247);
+}
+
+.selecionado {
+    color: rgb(240, 255, 255);
+}
+
+/* Estilo Caixa de Interação */
+.caixaInteracao {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.caixaInteracao textarea {
+    resize: none;
+    width: 800px;
+    height: 110px;
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    background-color: rgba(23, 23, 71, 0.55);
+    color: rgb(240, 255, 255);
+    font-size: 18px;
+}
+
+.btnGravar {
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    margin-bottom: 45px;
+}
+
+.btnGravar button {
+    border: none;
+    background-color: rgba(23, 23, 71, 0);
+    font-size: 20px;
+    cursor: pointer;
+    margin: 0 12px;
+}
+
+@media screen and (max-width: 860px) {
+    /* Estilo Fieldset */
+    .campos {
+        width: calc(100% - 20px);
+    }
+
+    /* Estilo Formulário */
+    .camposConjuntos {
+        width: calc(100% - 50px);
+        top: 50%;
+        left: 52%;
+        transform: translate(-50%, -50%);
+    }
+
+    .camposNome {
+        padding: 6px;
+        font-size: 16px;
+    }
+
+    .camposData {
+        width: 90px;
+        padding: 3px 2px;
+    }
+
+    .dataValida {
+        background-position-x: 100%;
+    }
+
+    .camposSelect {
+        left: 106px;
+        width: 160px;
+    }
+
+    /* Estilo Caixa de Interação */
+    .caixaInteracao textarea {
+        width: calc(100% - 50px);
+    }
+}
+
+@media screen and (max-height: 760px)  {
+    /* Cabeçalho */
+    header {
+        padding: 12px 4%;
+    }
+
+    .tituloSecundario {
+        margin-top: 20px;
+    }
+
+    .campos {
+        height: calc(100% - 260px);
+    }
+
+    .camposConjuntos {
+        height: calc(100% - 50px);
+        top: calc(100% - 140px);
+        transform: translate(-50%, -45%);
+    }
+
+    .caixaInteracao {
+        margin-bottom: 10px;
+    }
+    
+    .caixaInteracao textarea {
+        height: 90px;
+        padding: 10px 10px;
+    }
+
+    .btnGravar {
+        margin-bottom: 15px;
+    }
+}
