@@ -204,9 +204,11 @@ function validacaoComandoDeVoz() {
 
         selecionarCampoCadastroPessoa(false);
     } else if (ouvindo == true) {
+        document.getElementById(arrayCamposCadastroPessoa[0].idCampo).blur();
+        document.getElementById(arrayCamposCadastroPessoa[0].idCampo).classList.remove("emFoco");
         document.getElementById("btnIcone").setAttribute("class", "fa-solid fa-microphone-slash");
         document.getElementById("btnIcone").setAttribute("style", "color: #FF0000;");
-        document.getElementById("campoInteracaoAPI").value = 'Clique no microfone abaixo para iniciar o cadastro com comando de voz!';
+        document.getElementById("campoInteracaoAPI").value = 'Clique no microfone ao lado para iniciar o cadastro com comando de voz!';
         ouvindo = false;
     }
 }
