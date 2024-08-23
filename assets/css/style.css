@@ -165,7 +165,7 @@ header {
 
 .caixaInteracao textarea {
     resize: none;
-    width: 800px;
+    width: 700px;
     height: 110px;
     border: 0;
     outline: 0;
@@ -176,20 +176,23 @@ header {
     font-size: 18px;
 }
 
-.btnGravar {
-    display: flex;
-    justify-content: center;
-    bottom: 0;
-    position: fixed;
-    width: 100%;
-    margin-bottom: 45px;
+.caixaInteracao button {
+    cursor: pointer;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    margin-top: 30px;
+    margin-right: 12px;
+    background-color: rgb(32, 32, 95);
 }
 
-.btnGravar button {
-    border: none;
-    background-color: rgba(23, 23, 71, 0);
+.caixaInteracao button:hover {
+    background-color: rgba(23, 23, 71, 0.55);
+}
+
+.caixaInteracao button i {
     font-size: 20px;
-    cursor: pointer;
     margin: 0 12px;
 }
 
@@ -227,8 +230,12 @@ header {
     }
 
     /* Estilo Caixa de Interação */
+    .caixaInteracao {
+        margin-left: 10px;
+    }
+
     .caixaInteracao textarea {
-        width: calc(100% - 50px);
+        margin-right: 20px;
     }
 }
 
@@ -254,14 +261,5 @@ header {
 
     .caixaInteracao {
         margin-bottom: 10px;
-    }
-    
-    .caixaInteracao textarea {
-        height: 90px;
-        padding: 10px 10px;
-    }
-
-    .btnGravar {
-        margin-bottom: 15px;
     }
 }
